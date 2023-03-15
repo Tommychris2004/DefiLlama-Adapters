@@ -60,3 +60,14 @@ module.exports = {
         borrowed
     }
 }
+var tvl = async () => {
+    try {
+        const balances = {}
+        const totalDeposited = await get('https://api2.kava.io/hard/total-deposited')
+        const totalBorrowed = await get('https://api2.kava.io/hard/total-borrowed')
+        // Rest of the code...
+    } catch (error) {
+        console.error("Error occurred while fetching data from Kava API:", error);
+        // Handle the error or return a default value
+    }
+}
